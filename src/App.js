@@ -9,16 +9,18 @@ import Home from './containers/Homepage'
 import Introduce from './containers/Introduce'
 import About from './containers/Aboutpage'
 
+import './App.scss'
+
 class Box extends Component{
   render() {
     return (
-        <main>
+        <div>
             <Switch>
                 <Route exact path={'/'} component={Home}/>
                 <Route path={'/about'} component={About}/>
                 <Route path={'/introduce'} component={Introduce}/>
             </Switch>
-        </main>
+        </div>
     )
   }
 }

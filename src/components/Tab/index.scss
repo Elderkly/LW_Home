@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  height:80px;
+  width:1220px;
+  .logo{
+    flex:1;
+    img{
+      height:60px;
+      width: 60px;
+    }
+  }
+}
+.navigationBox{
+  background: rgba(255,255,255,0);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.fixedHead{
+  position: fixed;
+  top:0;
+  z-index: 5;
+}

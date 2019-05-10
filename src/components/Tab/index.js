@@ -1,23 +1,36 @@
 import React,{Component} from "react";
-import {Link} from 'react-router-dom'
+//  withRouter 用户获取router参数
+import {Link,withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {updateScrollIndex} from '../../redux/actions/scrollActions'
+
+import './index.scss'
 import scrollIndex from "../../redux/reducers/scrollReducers";
 
 class Tab extends Component {
     render() {
         console.log(this.props)
         return (
-            <div>
-                <Link to={'/'}>
-                    首页
-                </Link>
-                <Link to={'/introduce'} onClick={() => this.props.updateScrollIndex(2)}>
-                    关于我们
-                </Link>
-                <Link to={'/about'}>
-                    关于我们
-                </Link>
+            <div
+                style={{background:`${this.props.scrollIndex === 0 ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,1)'}`}}
+                className={`contentBox navigationBox ${this.props.location.pathname === '/' ? 'fixedHead' : null}`}
+            >
+                <div className={'navigation'}>
+                    <div className={'logo'}>
+                        <img src={require('../../assets/logo.png')} alt={'logo'}/>
+                    </div>
+                    <div className={'tab'}>
+                        <Link to={'/'}>
+                            首页
+                        </Link>
+                        <Link to={'/introduce'}>
+                            关于我们
+                        </Link>
+                        <Link to={'/about'}>
+                            关于我们
+                        </Link>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -33,4 +46,4 @@ const setFun = dispatch => ({
     }
 })
 
-export default connect(getState,setFun)(Tab)
+export default connect(getState,setFun)(withRouter(Tab))
