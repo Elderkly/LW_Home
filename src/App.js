@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Provider} from 'react-redux'
+import store from './redux'
 import {HashRouter as Router,Route,Switch} from 'react-router-dom'
 
 import Tab from './components/Tab'
@@ -23,9 +25,12 @@ class Box extends Component{
 
 export default function() {
   return (
-    <Router>
-      <Tab />
-      <Box />
-    </Router>
+      <Provider store={store}>
+          <Router>
+              <Tab />
+              <Box />
+          </Router>
+      </Provider>
+
   )
 }
