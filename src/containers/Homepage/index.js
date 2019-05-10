@@ -23,20 +23,21 @@ class Home extends Component{
         window.removeEventListener('mousewheel',this._onScroll)
     }
     _onScroll = (e) => {
+        let { index } = this.state
         if (e.deltaY > 50 && this.state.openScrollSwitch && this.state.index !== 4) {
-            const index = Math.min(4,this.state.index += 1)
+            const Index = Math.min(4,++index)
             this.setState({
                 index,
                 openScrollSwitch:false
             })
-            this.props.updateScrollIndex(index)
+            this.props.updateScrollIndex(Index)
         } else if (e.deltaY < -50 && this.state.openScrollSwitch  && this.state.index !== 0) {
-            const index = Math.max(0,this.state.index -= 1)
+            const Index = Math.max(0,--index)
             this.setState({
                 index,
                 openScrollSwitch:false
             })
-            this.props.updateScrollIndex(index)
+            this.props.updateScrollIndex(Index)
         }
     }
     render() {
@@ -45,10 +46,11 @@ class Home extends Component{
                 axis={'y'}
                 index={this.state.index}
                 animateHeight={true}
-                // springConfig={{
-                //     duration:'2s',
-                //     delay: '0s'
-                // }}
+                springConfig={{
+                    duration: '0.6s',
+                    easeFunction: 'ease',
+                    delay: '0s'
+                }}
                 onTransitionEnd={() => this.setState({openScrollSwitch:true})}
             >
                 <div className={'slide'} style={{background: "#FEA900"}}>

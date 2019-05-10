@@ -5,11 +5,10 @@ import {connect} from 'react-redux'
 import {updateScrollIndex} from '../../redux/actions/scrollActions'
 
 import './index.scss'
-import scrollIndex from "../../redux/reducers/scrollReducers";
 
 class Tab extends Component {
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <div
                 style={{background:`${this.props.scrollIndex === 0 ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,1)'}`}}
@@ -24,7 +23,7 @@ class Tab extends Component {
                             首页
                         </Link>
                         <Link to={'/introduce'}>
-                            关于我们
+                            介绍
                         </Link>
                         <Link to={'/about'}>
                             关于我们
