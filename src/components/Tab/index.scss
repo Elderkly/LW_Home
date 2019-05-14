@@ -1,13 +1,37 @@
 .navigation {
   display: flex;
   align-items: center;
-  height:80px;
+  height:118px;
   width:1220px;
   .logo{
     flex:1;
     img{
-      height:60px;
-      width: 60px;
+      height:55px;
+      width: 90px;
+    }
+  }
+  .tab{
+    a{
+      display: block;
+      width: 95px;
+      float: left;
+      text-align: center;
+      margin-right: 68px;
+      height: 114px;
+      line-height: 118px;
+      text-decoration: none;
+      font-size: 22px;
+      color:#666666;
+      border-bottom: 4px solid transparent;
+      -webkit-transition: all .3S ease;
+      -moz-transition: all .3S ease;
+      -ms-transition: all .3S ease;
+      -o-transition: all .3S ease;
+      transition: all .3S ease;
+    }
+    .focus{
+      color:#00D4D6;
+      border-bottom: 4px solid #00D4D6;
     }
   }
 }

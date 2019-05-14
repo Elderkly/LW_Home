@@ -5,13 +5,15 @@ import {connect} from "react-redux";
 import './index.scss'
 
 import SwipeableViews from 'react-swipeable-views';
+import Pagination from './Pagination'
 
 class Home extends Component{
     constructor(props) {
         super(props)
         this.state = {
             index:0,
-            openScrollSwitch:true
+            openScrollSwitch:true,
+            middleIndex:0
         }
     }
     componentWillMount() {
@@ -24,8 +26,8 @@ class Home extends Component{
     }
     _onScroll = (e) => {
         let { index } = this.state
-        if (e.deltaY > 50 && this.state.openScrollSwitch && this.state.index !== 4) {
-            const Index = Math.min(4,++index)
+        if (e.deltaY > 50 && this.state.openScrollSwitch && this.state.index !== 2) {
+            const Index = Math.min(2,++index)
             this.setState({
                 index,
                 openScrollSwitch:false
@@ -40,6 +42,11 @@ class Home extends Component{
             this.props.updateScrollIndex(Index)
         }
     }
+    handleChangeMiddleIndex = index => {
+        this.setState({
+            middleIndex:index
+        });
+    };
     render() {
         return (
             <SwipeableViews
@@ -57,16 +64,32 @@ class Home extends Component{
                     slide n°1
                 </div>
                 <div className={'slide'} style={{background: "#B3DC4A"}}>
-                    slide n°2
-                </div>
-                <div className={'slide'} style={{background: "#6AC0FF"}}>
-                    slide n°3
+                    <SwipeableViews
+                        axis={'x'}
+                        index={this.state.middleIndex}
+                        animateHeight={true}
+                        springConfig={{
+                            duration: '0.6s',
+                            easeFunction: 'ease',
+                            delay: '0s'
+                        }}
+                        enableMouseEvents
+                        onChangeIndex={this.handleChangeMiddleIndex}
+                    >
+                        <div className={'slide'} style={{background: "#6AC0FF"}}>
+                            slide n°1
+                        </div>
+                        <div className={'slide'} style={{background: "#B3DC4A"}}>
+                            slide n°2
+                        </div>
+                        <div className={'slide'} style={{background: "#6AC0FF"}}>
+                            slide n°3
+                        </div>
+                    </SwipeableViews>
+                    <Pagination dots={3} index={this.state.middleIndex} onChangeIndex={this.handleChangeMiddleIndex}/>
                 </div>
                 <div className={'slide'} style={{background: "#B3DC4A"}}>
-                    slide n°4
-                </div>
-                <div className={'slide'} style={{background: "#FEA900"}}>
-                    slide n°5
+                    slide n°3
                 </div>
             </SwipeableViews>
         )
