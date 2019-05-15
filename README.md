@@ -2,7 +2,7 @@
 
 ## 撩玩
 
-撩玩APP官方网站 [预览](http://www.51mowan.com)
+撩玩App官网 [预览](http://www.51mowan.com)
 
 ## 使用说明
 
