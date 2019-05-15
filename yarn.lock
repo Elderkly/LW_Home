@@ -2468,11 +2468,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.npm.taobao.org/classnames/download/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
-
 clean-css@4.2.x:
   version "4.2.1"
   resolved "https://registry.npm.taobao.org/clean-css/download/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
@@ -6096,11 +6091,6 @@ lodash.templatesettings@^4.0.0:
   integrity sha1-K01OlbpEDZFf8IvImeRVNmZxMxY=
   dependencies:
     lodash._reinterpolate "~3.0.0"
-
-lodash.throttle@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.npm.taobao.org/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
-  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash.unescape@4.0.1:
   version "4.0.1"
@@ -10119,17 +10109,6 @@ vfile@^4.0.0:
     replace-ext "1.0.0"
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
-
-video-react@^0.13.7:
-  version "0.13.7"
-  resolved "https://registry.npm.taobao.org/video-react/download/video-react-0.13.7.tgz#3eda5d798a793629d9af9459d904924c6e9a3f86"
-  integrity sha1-PtpdeYp5NinZr5RZ2QSSTG6aP4Y=
-  dependencies:
-    "@babel/runtime" "^7.2.0"
-    classnames "^2.2.6"
-    lodash.throttle "^4.1.1"
-    prop-types "^15.6.2"
-    redux "^4.0.1"
 
 vm-browserify@0.0.4:
   version "0.0.4"
