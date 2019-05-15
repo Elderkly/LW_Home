@@ -3,3 +3,14 @@
   display: flex;
   justify-content: center;
 }
+.viewBox{
+  width:1200px;
+  display: flex;
+  justify-content: center;
+}
+.pagination button:last-child{
+  margin-right: 0!important;
+}
+.react-swipeable-view-container > div{
+  overflow: hidden!important;
+}

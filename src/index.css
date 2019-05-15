@@ -1,5 +1,6 @@
-html{
+html,body{
   min-width: 1200px;
+  min-height: 768px;
 }
 body {
   margin: 0;
@@ -13,4 +14,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+p{
+  margin: 0;
 }

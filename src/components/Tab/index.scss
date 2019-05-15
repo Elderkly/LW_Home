@@ -1,28 +1,29 @@
 .navigation {
   display: flex;
   align-items: center;
-  height:118px;
+  height:60px;
   width:1220px;
   .logo{
     flex:1;
     img{
-      height:55px;
-      width: 90px;
+      height:44px;
+      width: 70px;
     }
   }
   .tab{
-    a{
+    div{
       display: block;
       width: 95px;
       float: left;
       text-align: center;
-      margin-right: 68px;
-      height: 114px;
-      line-height: 118px;
+      margin-right: 92px;
+      height: 58px;
+      line-height: 60px;
       text-decoration: none;
-      font-size: 22px;
+      font-size: 18px;
       color:#666666;
-      border-bottom: 4px solid transparent;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
       -webkit-transition: all .3S ease;
       -moz-transition: all .3S ease;
       -ms-transition: all .3S ease;

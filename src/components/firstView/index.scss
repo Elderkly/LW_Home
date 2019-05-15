@@ -1,0 +1,113 @@
+.banner_home_left{
+  width: 18.8020%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.banner_home_right{
+  width: 52.6042%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.viewBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .left{
+    .text1{
+      width:230px;
+      height:46px;
+      border:2px solid rgba(61,47,132,1);
+      border-radius:23px;
+      font-size: 18px;
+      color: #3D2E84;
+      text-align: center;
+      line-height: 46px;
+    }
+    .liaowan{
+      width:393px;
+      margin-top: 22px;
+    }
+    .textBox{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 77px;
+      .leftView{
+        width: 4px;
+        height: 99px;
+        background:linear-gradient(180deg,rgba(8,227,229,1) 0%,rgba(67,253,225,1) 100%);
+        margin-right: 26px;
+      }
+      .textViewBox{
+        p{
+          font-size: 16px;
+          color: #999;
+          display: block;
+          margin: 0;
+        }
+      }
+
+    }
+    .buttonBox{
+      margin-top: 140px;
+      display: flex;
+      flex-direction: row;
+      .download{
+        width: 300px;
+        height: 90px;
+        border-radius: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .android{
+        background:linear-gradient(90deg,rgba(1,212,214,1) 0%,rgba(36,235,205,1) 100%);
+        margin-right: 50px;
+        img{
+          width: 22px;
+          height: 26px;
+          margin-right:17px;
+        }
+        span{
+          font-size: 24px;
+          color: #fff;
+        }
+      }
+      .ios{
+        border:2px solid rgba(161,159,166,1);
+        img{
+          width: 22px;
+          height: 26px;
+          margin-right:17px;
+        }
+        span{
+          font-size: 24px;
+          color: #A19FA6;
+        }
+      }
+    }
+  }
+  .right{
+    margin-left: 66px;
+    position: relative;
+    .phone{
+      margin-top: 21px;
+      width: 475px;
+    }
+    .phoneContent{
+      width: 309px;
+      height: 550px;
+      position: absolute;
+      z-index: 5;
+      background: rgba(0,0,0,.5);
+      top: 79px;
+      left: 85px;
+    }
+  }
+}

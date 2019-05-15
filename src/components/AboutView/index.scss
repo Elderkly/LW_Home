@@ -1,0 +1,19 @@
+.aboutLeft,.aboutRight{
+  flex:1
+}
+.aboutLeft{
+  margin-top: 120px;
+}
+.aboutRight{
+  img{
+    width: 769px;
+    margin-left: 92px;
+  }
+}
+.aboutPbox{
+  margin-bottom: 34px;
+  p{
+    font-size: 20px;
+    color:#666666;
+  }
+}

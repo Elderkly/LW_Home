@@ -1,0 +1,47 @@
+.mainBox{
+  min-height: 640px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .left{
+      flex:1;
+      .banner{
+        width: 640px;
+      }
+    }
+    .right{
+      flex:1;
+      text-align: right;
+      .title3{
+        font-size: 48px;
+        color:#00DBDB;
+        margin-bottom:30px;
+        font-weight: 500;
+        margin-top: 138px;
+      }
+      .title4{
+        font-size: 26px;
+        color: #888888;
+        margin-bottom: 8px;
+      }
+      .title5{
+        font-size: 26px;
+        color: #888888;
+      }
+    }
+    .phone_icon_3_bn{
+      position: absolute;
+      width: 100vw;
+      top: 0;
+      left: calc(50% - 50vw);
+      z-index: -1;
+    }
+  }
+}
